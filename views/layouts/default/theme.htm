@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html {{language_attributes()}}>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{{ pagedescription() }}}"/>
+    <meta name="keywords" content="{{{ pagekeywords() }}}"/>
+    <link rel="icon" href="{{ get_theme_config('icon') }}" />
+    <link rel="alternate" href="{{ url('feeds/pages') }}" title="Pages Feed" type="application/atom+xml"/>
+    <link rel="alternate" href="{{ url('feeds/blog') }}" title="Blog Feed" type="application/atom+xml"/>
+    {{hreflang()}}
+    <title>{{{ pagetitle() }}}</title>
+    {{$header}}
+    <style>
+        {{ get_theme_config('custom_css') }}
+    </style>
+    <script>
+        {{ get_theme_config('custom_js') }}
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                {{$grids['header']['logo']}}
+                <div class="navbar-collapse collapse ">
+                    {{$grids['header']['menu']}}
+                </div>
+            </div>
+        </div>
+    </header>
+    @if(is_array($grids['body']))
+    <!-- end header -->
+    <section id="featured">
+        {{$grids['body']['slider']}}
+    </section>
+    {{$grids['body']['full1']}}
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            {{$grids['body']['box1']}}
+                        </div>
+                        <div class="col-lg-3">
+                            {{$grids['body']['box2']}}
+                        </div>
+                        <div class="col-lg-3">
+                            {{$grids['body']['box3']}}
+                        </div>
+                        <div class="col-lg-3">
+                            {{$grids['body']['box4']}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- divider -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="solidline">
+                    </div>
+                </div>
+            </div>
+            <!-- end divider -->
+            <!-- Portfolio Projects -->
+            <div class="row">
+                <div class="col-lg-12">
+                    {{$grids['body']['full2']}}
+                    <div class="row">
+                        <section id="projects">
+                            {{$grids['body']['portfolio']}}
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    @else
+    {{$grids['body']}}
+    @endif
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        {{$grids['footer']['box1']}}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        {{$grids['footer']['box2']}}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        {{$grids['footer']['box3']}}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="widget">
+                        {{$grids['footer']['box4']}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        {{$grids['footer']['box5']}}
+                    </div>
+                    <div class="col-lg-6">
+                        {{$grids['footer']['box6']}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+{{$footer}}
+</body>
+</html>

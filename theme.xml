@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<addon>
+    <name>moderna</name>
+    <title>Moderna - Bootstrap 3 Theme</title>
+    <image>http://laravel.com/assets/img/laravel-logo.png</image>
+    <version>1.0</version>
+    <author>bonweb.gr</author>
+    <url>http://www.bonweb.gr</url>
+    <configurator>
+        <logo type="image"></logo>
+        <icon type="image"></icon>
+        <copyright type="text">&#xA9; Anastasia APP. </copyright>
+        <twitter_url type="text">https://twitter.com/anastasia_app</twitter_url>
+        <facebook_url type="text">https://www.facebook.com/pages/Anastasia-Publishing-Platform-APP/1429413080696658?fref=ts</facebook_url>
+        <linked_url type="text"></linked_url>
+        <pinterest_url type="text"></pinterest_url>
+        <gplus_url type="text">https://plus.google.com/b/114894231467888304604/114894231467888304604/posts</gplus_url>
+        <custom_css type="code_css"></custom_css>
+        <custom_js type="code_js"></custom_js>
+    </configurator>
+</addon>

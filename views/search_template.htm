@@ -1,0 +1,22 @@
+<h1 class="page-header">{{ t('strings.search_results') }}</h1>
+<div class="content">
+    @foreach($item as $k=>$sub)
+    <h3>{{ $sub['content']['title'] }}</h3>
+    <div id="content_{{$k}}">
+
+            <ul class="nav nav-stacked">
+                @forelse($sub['data'] as $item)
+
+                <li><a href="{{url($item->slug)}}">{{$item->title}}</a></li>
+
+                @empty
+                <li>{{t('strings.no_data_found')}}</li>
+                @endforelse
+
+        </ul>
+        {{$sub['data']->appends(array('search' => $q))->links()}}
+
+
+    </div>
+    @endforeach
+</div>

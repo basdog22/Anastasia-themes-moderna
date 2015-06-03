@@ -1,0 +1,15 @@
+<div class="box">
+    <div class="box-gray aligncenter">
+        <h4>{{the_title($item)}}</h4>
+        <div class="icon">
+            <i class="fa {{$item['data']['iconclass']}} fa-3x"></i>
+        </div>
+
+         {{the_content($item)}}
+
+
+    </div>
+    <div class="box-bottom">
+        <a href="{{url($item['data']['url'])}}">{{$item['data']['button']}}</a>
+    </div>
+</div>

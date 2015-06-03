@@ -1,0 +1,12 @@
+{{ Form::label(t('strings.title')) }}
+{{ Form::text('params[title]',$params['title']) }}
+<div class="clearfix"></div>
+{{ Form::label(t('strings.content')) }}
+{{ Form::textarea('params[content]',$params['content']) }}
+<div class="clearfix"></div>
+{{ Form::label(t('strings.url')) }}
+{{ Form::text('params[url]',$params['url']) }}
+<div class="clearfix"></div>
+{{ Form::label(t('strings.button')) }}
+{{ Form::text('params[button]',$params['button']) }}
+<div class="clearfix"></div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Slider -->
+            <div id="main-slider" class="flexslider">
+                <ul class="slides">
+                    @foreach($item['data'] as $k=>$slide)
+                    <li>
+                        <img src="{{$slide['img']->url(1024)}}" alt="{{$slide['img']->title}}" />
+                        <div class="flex-caption">
+                            <h3>{{$slide['title']}}</h3>
+                            <p>{{$slide['content']}}</p>
+                            <a href="{{$slide['url']}}" class="btn btn-theme">{{$slide['button']}}</a>
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            <!-- end slider -->
+        </div>
+    </div>
+</div>
